@@ -18,7 +18,7 @@ const Hero = () => {
             </h3>
 
             <p className='desc'>
-                Simplify your reading with <strong>AI WriteUp Snip</strong>, an article summarizer that transforms lengthy articles into clear and concise summaries.
+                Simplify your reading with <strong>WriteUp Snip</strong>, an article summarizer that transforms lengthy articles into clear and concise summaries.
             </p>
         </header>
     )
