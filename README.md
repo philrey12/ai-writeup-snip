@@ -1,2 +1,2 @@
 # rewrite-up
-(Under construction)
+An Article Summarizer Application using OpenAI GPT-4
