@@ -1,2 +1,2 @@
-# ai-writeup-snip
+# rewrite-up
 (Under construction)

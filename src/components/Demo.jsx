@@ -60,9 +60,11 @@ const Demo = () => {
                     <button 
                         type='submit' 
                         className='submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700' 
-                        title='Generate Summary' 
+                        title='Start Summary' 
                     >Go</button>
                 </form>
+
+                <p className='text-sm text-red-400 text-center my-2'>Warning: You might encounter some error or get no result due to the usage limit</p>
 
                 {/* URL history */}
                 <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
@@ -99,7 +101,7 @@ const Demo = () => {
                 ) : (
                     article.summary && (
                         <div className='flex flex-col gap-3'>
-                            <h2 className='font-satoshi font-bold text-gray-600 text-xl text-center'>Article <span className='blue_gradient'>Summary</span></h2>
+                            <h2 className='font-satoshi font-bold text-gray-700 text-xl text-center'>ARTICLE <span className='blue_gradient'>SUMMARY</span></h2>
                             
                             <div className='summary_box'>
                                 <p className='font-inter font-medium text-sm text-gray-700'>
