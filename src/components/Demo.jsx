@@ -7,9 +7,8 @@ const Demo = () => {
         url: '',
         summary: ''
     })
-
     const [allArticles, setAllArticles] = useState([])
-
+    const [copied, setCopied] = useState('')
     const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery()
 
     useEffect(() => {
@@ -33,9 +32,13 @@ const Demo = () => {
             setAllArticles(updatedAllArticles)
 
             localStorage.setItem('articles', JSON.stringify(updatedAllArticles))
-
-            console.log(newArticle)
         }
+    }
+
+    const copyHandler = (copyUrl) => {
+        setCopied(copyUrl)
+        navigator.clipboard.writeText(copyUrl)
+        setTimeout(() => setCopied(false), 3000)
     }
 
     return (
@@ -56,9 +59,7 @@ const Demo = () => {
 
                     <button 
                         type='submit' 
-                        className='submit_btn 
-                            peer-focus:border-gray-700 
-                            peer-focus:text-gray-700' 
+                        className='submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700' 
                         title='Generate Summary' 
                     >Go</button>
                 </form>
@@ -67,8 +68,12 @@ const Demo = () => {
                 <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
                     {allArticles.map((item, index) => (
                         <div key={`link-${index}`} onClick={() => setArticle(item)} className='link_card'>
-                            <div className='copy_btn'>
-                                <img src={copy} alt='copy_icon' className='w-[50%] h[50%] object-contain' title='Copy to Clipboard' />
+                            <div className='copy_btn' onClick={() => copyHandler(item.url)}>
+                                <img 
+                                    src={copied === item.url ? tick : copy} 
+                                    alt='copy_icon' className='w-[50%] h[50%] object-contain' 
+                                    title='Copy to Clipboard' 
+                                />
                             </div>
 
                             <p className='flex-1 font-satoshi text-blue-500 font-medium text-sm truncate'>
