@@ -64,7 +64,7 @@ const Demo = () => {
                     >Go</button>
                 </form>
 
-                <p className='text-sm text-red-400 text-center my-2 px-5'>Warning:<br />This is a demo only and you might encounter some errors or get no result due to the usage limit</p>
+                <p className='text-sm text-red-400 text-center my-2 px-5'>Warning:<br />This is only a demo and you might encounter some errors or get no result due to the usage limit</p>
 
                 {/* URL history */}
                 <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
