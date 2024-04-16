@@ -64,7 +64,7 @@ const Demo = () => {
                     >Go</button>
                 </form>
 
-                <p className='text-sm text-red-400 text-center my-2 px-5'>Note:<br />This is just a demo and only using a free tier service of the API with a limited usage</p>
+                <p className='text-sm text-red-400 text-center my-2 px-5'>Note:<br />This demo project is running on a free-tier basis, allowing only limited usage for showcasing its functionality.</p>
 
                 {/* URL history */}
                 <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
